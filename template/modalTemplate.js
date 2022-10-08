@@ -2,29 +2,32 @@ import close from `../assets/close.png`
 
 export function modalPostTemplate() {
   return `<div class="modal__close">
-                <img
-                width="60px"
-                height="60px"
-                src=${close}
-                alt="close_icon_logo"
-                />
-            </div>
-            <div class="modal__post">
-                <form
-                <div class="modal__header">
-                    <div class="modal__back">
-                        <img width="32px" height="24px" src=${arrow} alt="arrow_back_icon" />
-                    </div>
-                    <h2>새 게시물 만들기</h2>
-                    <p>공유하기</p>
-                </div>
-                <div class="modal__main">
-                <img src=${media} alt="media_icon" />
-                <h3>사진과 동영상을 업로드 해보세요.</h3>
-                <label for="file">
-                    <p>컴퓨터에서 선택</p>
-                </label>
-                <input type="file" name="file" id="file" />
-                </div>
-            </div>`;
+  <img
+  width="60px"
+  height="60px"
+  src=${close}
+  alt="close_icon_logo"
+  />
+</div>
+
+<form action="#" accept-charset="utf-8" name="post" method="post">
+  <div class="container__post">
+      <div id="title__post"><input type="text" name="title" placeholder="제  목"></div>
+      <div id="elements__post">
+          <div><h3>장 소</h3><input type="text" name="palce" placeholder="비어 있음"></div>
+          <div><h3>날 짜</h3><input type="date" name="date" placeholder="비어 있음" id="input_date"></div>
+          <div><h3>메 뉴</h3><input type="text" name="menu" placeholder="비어 있음"></div>
+          <div><h3>예상비용</h3><input type="text" name="price" placeholder="비어 있음"></div>
+          <div><h3>희망인원</h3><input type="text" name="how_many" placeholder="비어 있음"></div>
+      </div>
+      <div id="content__post">
+          <textarea name="content" id="content"  style="width:100%;" rows="10" placeholder="간단하게 모임을 소개해주세요!"></textarea>
+      </div>
+  </div>
+  <button>작성완료</button>
+</form>
+<script>
+  let curDate = new Date().toISOString().substring(0,10)
+  document.getElementById("input_date").setAttribute("min",curDate)
+</script>`;
 }
