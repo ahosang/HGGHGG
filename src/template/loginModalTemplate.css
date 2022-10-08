@@ -1,101 +1,77 @@
 .login__form{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    padding: 0px;
     gap: 68px;
-
-    position: absolute;
-    width: 640px;
-    height: 448px;
-    left: 0px;
-    top: 128px;
-
+ 
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .login__title{
-    width: 269px;
-    height: 77px;
+    width: auto;
 
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 600;
     font-size: 64px;
     line-height: 77px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 
-    color: #000000;
+    color: black;
 
 
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
 }
 .login__input{
-    width: 269px;
-    height: 77px;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 64px;
-    line-height: 77px;
+    width: auto;
+    
     display: flex;
+    flex-direction: column;
     align-items: flex-end;
 
     color: #000000;
-
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 0;
-    flex-grow: 0;
 }
-.btn{
+/* input::placeholder {
+    text-align: center;
+} */
+.login__input>div{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    gap: 20px;
     
-    width: 640px;
-    height: 69px;
-
-
-    /* Inside auto layout */
-
-    flex: none;
-    order: 2;
-    flex-grow: 0;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
 }
-#btn__login{
+.login__input>div>input{
+    width: 320px;
+    height: 64px;
+    background: #EFDCD5;
+    border-radius: 20px;
+    border: none;
+    margin: auto;
+    justify-content: flex-end;
+    padding-left: 10px;
+}
+.btn{    
+    width: auto;
+
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.myBtn{
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 15px;
     gap: 10px;
+    border:none ;
 
-    position: absolute;
-    width: 119px;
-    height: 69px;
-    left: 132px;
-    top: 0px;
-
-    background: #EFDCD5;
-}
-#btn__signup{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    gap: 10px;
-
-    position: absolute;
-    width: 148px;
-    height: 69px;
-    left: 379px;
-    top: 0px;
+    border-radius: 20px;
+    width: 120px;
+    height: 70px;
 
     background: #EFDCD5;
+    cursor: pointer;
 }
