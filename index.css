@@ -1,4 +1,4 @@
-/* 미완 */
+/* 배경 */
 body{    
     position: relative;
     min-height: 100vh;
@@ -181,7 +181,7 @@ main >nav > ul > li{
     background: rgba(239, 220, 213, 0.2);
     border-radius: 20px;
 }
-.nav_choose{
+.tab_choose{
     background: #EFDCD5;
 }
 /*   mian__ content */
