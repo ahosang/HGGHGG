@@ -1,0 +1,136 @@
+/* 상위 */
+body {
+    position: relative;
+    width: 720px;
+    height: 880px;
+
+    background: #ffffff;
+    border-radius: 20px;
+}
+
+/* ------- modalPost ------- */
+#modalPost{
+    width: 720px;
+    height: 880px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    position: relative;
+}
+
+.modal__close {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: 25px;
+    top: 42.43px;
+}
+
+.container__post {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 32px;
+
+    position: absolute;
+    width: 560px;
+    height: 730px;
+    left: calc(50% - 560px / 2);
+    top: 96px;
+}
+.container__post input {
+    height: auto;
+    border: none;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+    display: flex;
+    align-items: center;
+}
+
+#title__post {
+    display: flex;
+    align-items: center;
+}
+
+#title__post > input {
+    width: 560px;
+    height: 66px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+}
+#title__post > input::placeholder {
+    padding-left: 50px;
+}
+#elements__post {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    width: 560px;
+}
+
+#elements__post > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 17px;
+
+    width: 100%;
+    height: 50px;
+}
+
+#elements__post > div > h3 {
+    width: 100px;
+    height: 30px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+}
+
+#content__post {
+    width: 560px;
+    height: auto;
+}
+#content__post > textarea {
+    border: none;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}
+#content__post > textarea::placeholder {
+    padding-left: 50px;
+}
+.container__post + button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    width: 119px;
+    height: 59px;
+    right: 81px;
+    bottom: 61px;
+
+    background: #efdcd5;
+    border-radius: 20px;
+    border: none;
+
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}
+.container__post + button:hover {
+    cursor:pointer;
+}
