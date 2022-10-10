@@ -1,11 +1,12 @@
-import close from `../assets/close.png`
+//import close from `../../assets/close.png`
 
 export function modalPostTemplate() {
-  return `<div class="modal__close">
+    return `<article id="modalPost">
+        <div class="modal__close">
             <img
             width="60px"
             height="60px"
-            src=${close}
+            src="#"
             alt="close_icon_logo"
             />
         </div>
@@ -25,8 +26,9 @@ export function modalPostTemplate() {
             </div>
             <button>작성완료</button>
         </form>
+    </article>
     <script>
-    let curDate = new Date().toISOString().substring(0,10)
-    document.getElementById("input_date").setAttribute("min",curDate)
-    </script>`;
+        let curDate = new Date().toISOString().substring(0,10)
+        document.getElementById("input_date").setAttribute("min",curDate)
+    </script>`
 }

@@ -1,7 +1,7 @@
 
 console.log("main")
 loginCheck()
-document.querySelector('#add_post_btn').addEventListener('click', createModal(modalPostTemplate));
+document.querySelector('#add_post_btn').addEventListener('click', ()=>createModal(modalPostTemplate));
 
 function createModal(modalTemplate){
     console.log(modalTemplate)
