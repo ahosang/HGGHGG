@@ -1,3 +1,10 @@
+#modalPost{
+    width: 720px;
+    height: 880px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    position: relative;
+}
 .modal__close {
     position: absolute;
     right: 20px;
