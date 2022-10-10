@@ -1,5 +1,5 @@
 document.querySelector('#add_post_btn').addEventListener('click', createModal);
-document.querySelector('#header_logout').addEventListener('click',createLoginModal);
+document.querySelector('#header_login').addEventListener('click',createLoginModal);
 document.querySelector('#header_mypage').addEventListener('click',goToMyPage);
 console.log("main")
 
