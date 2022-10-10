@@ -2,13 +2,16 @@
 console.log("main")
 loginCheck()
 document.querySelector('#add_post_btn').addEventListener('click', ()=>createModal(modalPostTemplate));
+document.querySelector('#header_login').addEventListener('click',()=>createModal(loginModalTemplate));
+document.querySelector('#header_mypage').addEventListener('click',goToMyPage);
 
-function createModal(modalTemplate){
-    console.log(modalTemplate)
+
+function createModal(){
+    console.log("createModal")
 
     const modalEl = document.createElement("div")
     modalEl.setAttribute("class", "modal__layout")
-    modalEl.innerHTML = modalTemplate()
+    modalEl.innerHTML = modalPostTemplate()
     document.querySelector("body").prepend(modalEl)
 
     const modalCloseEl = document.querySelector(".modal__close");
@@ -29,7 +32,12 @@ function loginCheck(){
     }
 }
 
-//------------------ modal Template
+
+function goToMyPage(){
+    console.log("goToMyPage")
+    location.href='./mypage/myPageTemplate.html'
+}
+
 function modalPostTemplate() {
   return `<article id="modalPost">
       <div class="modal__close">
@@ -61,4 +69,27 @@ function modalPostTemplate() {
       let curDate = new Date().toISOString().substring(0,10)
       document.getElementById("input_date").setAttribute("min",curDate)
   </script>`
+}
+
+function loginModalTemplate(){
+    return `
+    <article id="modalLogin">
+        <div class="modal__close">
+            <img width="60px" height="60px" style="cursor:pointer;" src='../src/assets/close.png'/>
+        </div>
+        <form action="#" accept-charset="utf-8" name="login" method="post">
+            <div class="login__form">
+                <h2 class="login__title">함께, 한끼</h2>
+                <div class="login__input">
+                    <div><h3>아이디</h3><input type="text" name="username" ></div>
+                    <div><h3>비밀번호</h3><input type="password" name="password" ></div>
+                </div>
+                <div class="btn">
+                    <input type="submit" class="myBtn" value="로그인">
+                    <input type="button" class="myBtn" value="회원가입">
+                </div>
+            </div>
+        </form>
+    </article>
+    `
 }

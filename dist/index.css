@@ -356,3 +356,98 @@ main >nav > ul > li{
 .container__post + button:hover {
     cursor:pointer;
 }
+
+/*       modal login       */
+#modalLogin{
+    display: flex;
+    flex-direction: column;
+    width: 640px;
+    height: 720px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+#modalLogin>form{
+    display: flex;
+    width: 640px;
+    justify-content: center;
+}
+.login__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 68px;
+ 
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.login__title{
+    width: auto;
+
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 77px;
+    display: flex;
+    align-items: center;
+
+    color: black;
+
+
+}
+.login__input{
+    width: auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    color: #000000;
+}
+/* input::placeholder {
+    text-align: center;
+} */
+.login__input>div{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    gap: 20px;
+    
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}
+.login__input>div>input{
+    width: 320px;
+    height: 64px;
+    background: #EFDCD5;
+    border-radius: 20px;
+    border: none;
+    margin: auto;
+    justify-content: flex-end;
+    padding-left: 10px;
+}
+.btn{    
+    width: auto;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.myBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+    border:none ;
+
+    border-radius: 20px;
+    width: 120px;
+    height: 70px;
+
+    background: #EFDCD5;
+    cursor: pointer;
+}
