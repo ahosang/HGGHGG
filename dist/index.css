@@ -51,7 +51,7 @@ header #header_logo {
     line-height: 29px;
     color: #8c7b75;
 }
-header #header_right {
+header .header_right {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,6 +67,9 @@ header #header_right {
     line-height: 19px;
 
     color: #8C7B75;
+}
+.hidden {
+    display: none !important;
 }
 /* main_logo */
 #logo_sec{
@@ -217,7 +220,9 @@ main >nav > ul > li{
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
 
-    position: absolute;
+    position: fixed;
+    top:0;
+    right:0;
     z-index: 99;
 
     display: flex;

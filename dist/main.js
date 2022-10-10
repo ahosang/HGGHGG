@@ -1,14 +1,14 @@
 
-document.querySelector('#add_post_btn').addEventListener('click', createModal);
 console.log("main")
+loginCheck()
+document.querySelector('#add_post_btn').addEventListener('click', createModal(modalPostTemplate));
 
-
-function createModal(){
-    console.log("createModal")
+function createModal(modalTemplate){
+    console.log(modalTemplate)
 
     const modalEl = document.createElement("div")
     modalEl.setAttribute("class", "modal__layout")
-    modalEl.innerHTML = modalPostTemplate()
+    modalEl.innerHTML = modalTemplate()
     document.querySelector("body").prepend(modalEl)
 
     const modalCloseEl = document.querySelector(".modal__close");
@@ -18,6 +18,18 @@ function createModal(){
     });
 }
 
+function loginCheck(){
+    let isLogin = true;
+    if(isLogin){
+        document.querySelector('#logoutBox').classList.add("hidden");
+        document.querySelector('#loginBox').classList.remove("hidden");
+    }else{
+        document.querySelector('#loginBox').classList.add("hidden");
+        document.querySelector('#logoutBox').classList.remove("hidden");
+    }
+}
+
+//------------------ modal Template
 function modalPostTemplate() {
   return `<article id="modalPost">
       <div class="modal__close">
