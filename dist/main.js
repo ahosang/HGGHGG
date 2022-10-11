@@ -32,7 +32,6 @@ function loginCheck(){
     }
 }
 
-
 function goToMyPage(){
     console.log("goToMyPage")
     location.href='./mypage/myPageTemplate.html'

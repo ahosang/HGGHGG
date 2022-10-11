@@ -1,20 +1,23 @@
 import close from '../../assets/close.png';
 
 export function loginModalTemplate(){
-    return `<div class="modal__close">
-            <img width="22px" height="22px" src=${close} alt="close_icon_logo"/>
-            </div>
-            
-            <form action="#" accept-charset="utf-8" name="login" method="post">
-            <h1 class="login__title" align="center">로그인</h1>
+    return `<article id="modalLogin">
+    <div class="modal__close">
+        <img src=${close} alt="close_icon_logo"/>
+    </div>
+    <form action="#" accept-charset="utf-8" name="login" method="post">
+        <div class="login__form">
+            <h2 class="login__title">함께, 한끼</h2>
             <div class="login__input">
-                <input type="text" name="username" placeholder="아이디" >
-                <input type="password" name="password" placeholder="비밀번호">
+                <div><h3>아이디</h3><input type="text" name="username" ></div>
+                <div><h3>비밀번호</h3><input type="password" name="password" ></div>
             </div>
-            <div class="login__btn">
-                <input type="submit" id="btn-login" value="로그인">
-                <input type="button" value="회원가입">
+            <div class="btn">
+                <input type="submit" class="myBtn" value="로그인">
+                <input type="button" class="myBtn" value="회원가입">
             </div>
-            </form>
+        </div>
+    </form>
+</article>
     `;
 }

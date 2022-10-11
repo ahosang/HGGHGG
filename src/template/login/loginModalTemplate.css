@@ -1,22 +1,32 @@
-#modalPost{
-    width: 720px;
-    height: 880px;
+#modalLogin{
+    display: flex;
+    flex-direction: column;
+    width: 640px;
+    height: 720px;
     background: #FFFFFF;
     border-radius: 20px;
     position: relative;
+    justify-content: center;
+    align-items: center;
 }
 .modal__close {
     position: absolute;
-    right: 20px;
-    top: 10px;
-}
-.modal__close:hover{
+    width: 60px;
+    height: 60px;
+    right: 25px;
+    top: 42.43px;
+
     cursor: pointer;
+}
+#modalLogin>form{
+    display: flex;
+    width: 640px;
+    justify-content: center;
 }
 .login__form{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 68px;
  
@@ -41,7 +51,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-
+    gap: 20px;
     color: #000000;
 }
 /* input::placeholder {
