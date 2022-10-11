@@ -1,20 +1,25 @@
 /* 상위 */
 body {
     position: relative;
-    width: 720px;
-    height: 880px;
+    width: 100vw;
+    height: 100vh;
 
-    background: #ffffff;
+    background: black;
     border-radius: 20px;
 }
 
 /* ------- modalPost ------- */
 #modalPost{
-    width: 720px;
+    width: 1000px;
     height: 880px;
+    padding: 50px 70px;
     background: #FFFFFF;
     border-radius: 20px;
     position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal__close {
@@ -23,20 +28,17 @@ body {
     height: 60px;
     right: 25px;
     top: 42.43px;
+
+    cursor: pointer;
 }
 
 .container__post {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 5fr 4.5fr;
+    gap: 20px;
 
-    position: absolute;
-    width: 560px;
-    height: 730px;
-    left: calc(50% - 560px / 2);
-    top: 96px;
+    place-items: center center;   
 }
 .container__post input {
     height: auto;
@@ -50,6 +52,7 @@ body {
 }
 
 #title__post {
+    grid-row: 1/2;
     display: flex;
     align-items: center;
 }
@@ -64,16 +67,18 @@ body {
 #title__post > input::placeholder {
     padding-left: 50px;
 }
+
 #elements__post {
+    grid-row: 2/3;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
     gap: 24px;
-
-    width: 560px;
+    
+    width: 450px;
 }
-
 #elements__post > div {
     display: flex;
     flex-direction: row;
@@ -84,7 +89,6 @@ body {
     width: 100%;
     height: 50px;
 }
-
 #elements__post > div > h3 {
     width: 100px;
     height: 30px;
@@ -98,18 +102,67 @@ body {
     text-align: center;
 }
 
+#image__post{
+    grid-column: 2/3;
+    grid-row: 1/3;
+
+    width: 400px;
+    height: 350px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    
+}
+#image__post .picture {
+    width: 100%;
+    height: 280px;
+    background-color: #d9d9d9;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#image__post button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #efdcd5;
+    border-radius: 20px;
+    border: none;
+    width: auto;
+    height: 59px;
+
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}
+#image__post button:hover {
+    cursor:pointer;
+}
+
 #content__post {
-    width: 560px;
+    grid-column: 1/3;
+    width: 800px;
     height: auto;
 }
 #content__post > textarea {
+    width: 100%;
+    height: 6.25em;
+    resize: none;
     border: none;
+
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
 }
 #content__post > textarea::placeholder {
-    padding-left: 50px;
+    padding-left: 50px;    
 }
 .container__post + button {
     display: flex;
