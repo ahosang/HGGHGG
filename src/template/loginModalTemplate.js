@@ -1,4 +1,4 @@
-import close from '../../assets/close.png';
+import close from '../assets/close.png';
 
 export function loginModalTemplate(){
     return `<article id="modalLogin">
