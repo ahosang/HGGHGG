@@ -6,12 +6,12 @@ document.querySelector('#header_login').addEventListener('click',()=>createModal
 document.querySelector('#header_mypage').addEventListener('click',goToMyPage);
 
 
-function createModal(){
+function createModal(modalTemplate){
     console.log("createModal")
 
     const modalEl = document.createElement("div")
     modalEl.setAttribute("class", "modal__layout")
-    modalEl.innerHTML = modalPostTemplate()
+    modalEl.innerHTML = modalTemplate()
     document.querySelector("body").prepend(modalEl)
 
     const modalCloseEl = document.querySelector(".modal__close");
