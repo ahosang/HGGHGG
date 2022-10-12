@@ -1,7 +1,7 @@
-import createModal from "./utils/createModal.js"
-import loginCheck from "./utils/loginCheck.js"
-import loginModalTemplate from "./template/loginModalTemplate.js"
-import modalPostTemplate from "./template/modalPostTemplate.js"
+import {createModal} from "./utils/createModal.js"
+import {loginCheck} from "./utils/loginCheck.js"
+import {loginModalTemplate} from "./template/loginModalTemplate.js"
+import {modalPostTemplate} from "./template/modalPostTemplate.js"
 
 
 console.log("main")

@@ -1,4 +1,4 @@
-import logo from '../assets/simple__logo.png'
+import logo from '../assets/simple__logo.png';
 export function myPageTemplate(){
     return `
     <body>
