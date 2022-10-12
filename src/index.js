@@ -14,5 +14,5 @@ document.querySelector('#header_mypage').addEventListener('click',goToMyPage);
 
 function goToMyPage(){
     console.log("goToMyPage")
-    location.href='./mypage/myPageTemplate.html'
+    location.href='../mypage/myPageTemplate.html'
 }
