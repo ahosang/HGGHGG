@@ -143,7 +143,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.loginCheck = loginCheck;
 function loginCheck() {
-  var isLogin = false;
+  var isLogin = true;
   if (isLogin) {
     document.querySelector('#logoutBox').classList.add("hidden");
     document.querySelector('#loginBox').classList.remove("hidden");
@@ -187,7 +187,10 @@ var _loginModalTemplate = require("./template/loginModalTemplate.js");
 var _modalPostTemplate = require("./template/modalPostTemplate.js");
 console.log("main");
 (0, _loginCheck.loginCheck)();
-document.querySelector('#add_post_btn').addEventListener('click', function () {
+document.querySelectorAll('#add_post_btn')[0].addEventListener('click', function () {
+  return (0, _createModal.createModal)(_modalPostTemplate.modalPostTemplate);
+});
+document.querySelectorAll('#add_post_btn')[1].addEventListener('click', function () {
   return (0, _createModal.createModal)(_modalPostTemplate.modalPostTemplate);
 });
 document.querySelector('#header_login').addEventListener('click', function () {
@@ -196,7 +199,7 @@ document.querySelector('#header_login').addEventListener('click', function () {
 document.querySelector('#header_mypage').addEventListener('click', goToMyPage);
 function goToMyPage() {
   console.log("goToMyPage");
-  location.href = './mypage/myPageTemplate.html';
+  location.href = '../mypage/myPageTemplate.html';
 }
 },{"./utils/createModal.js":"src/utils/createModal.js","./utils/loginCheck.js":"src/utils/loginCheck.js","./template/loginModalTemplate.js":"src/template/loginModalTemplate.js","./template/modalPostTemplate.js":"src/template/modalPostTemplate.js"}],"C:/Users/ahosang/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -223,7 +226,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54700" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49944" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
