@@ -143,7 +143,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.loginCheck = loginCheck;
 function loginCheck() {
-  var isLogin = false;
+  var isLogin = true;
   if (isLogin) {
     document.querySelector('#logoutBox').classList.add("hidden");
     document.querySelector('#loginBox').classList.remove("hidden");
@@ -187,7 +187,10 @@ var _loginModalTemplate = require("./template/loginModalTemplate.js");
 var _modalPostTemplate = require("./template/modalPostTemplate.js");
 console.log("main");
 (0, _loginCheck.loginCheck)();
-document.querySelector('#add_post_btn').addEventListener('click', function () {
+document.querySelectorAll('#add_post_btn')[0].addEventListener('click', function () {
+  return (0, _createModal.createModal)(_modalPostTemplate.modalPostTemplate);
+});
+document.querySelectorAll('#add_post_btn')[1].addEventListener('click', function () {
   return (0, _createModal.createModal)(_modalPostTemplate.modalPostTemplate);
 });
 document.querySelector('#header_login').addEventListener('click', function () {

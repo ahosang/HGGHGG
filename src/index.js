@@ -6,7 +6,8 @@ import {modalPostTemplate} from "./template/modalPostTemplate.js"
 
 console.log("main")
 loginCheck()
-document.querySelector('#add_post_btn').addEventListener('click', ()=>createModal(modalPostTemplate));
+document.querySelectorAll('#add_post_btn')[0].addEventListener('click', ()=>createModal(modalPostTemplate));
+document.querySelectorAll('#add_post_btn')[1].addEventListener('click', ()=>createModal(modalPostTemplate));
 document.querySelector('#header_login').addEventListener('click',()=>createModal(loginModalTemplate));
 document.querySelector('#header_mypage').addEventListener('click',goToMyPage);
 
